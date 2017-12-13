@@ -1,0 +1,30 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "Build a node server using TDD.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest test/*.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toChaim/tdd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toChaim/tdd/issues"
+  },
+  "homepage": "https://github.com/toChaim/tdd#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
