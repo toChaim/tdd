@@ -1,8 +1,8 @@
-const express = require('express');
-const app = express();
+const api = require('express')();
+//const api = express();
 
-app.get('/users', function(req, res) {
+api.get('/users', function(req, res) {
   res.status(200).json({ name: 'tobi' });
 });
 
-module.exports = { app };
+module.exports = { api };
