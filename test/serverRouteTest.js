@@ -1,10 +1,10 @@
 const request = require('supertest');
 const { expect } = require('chai');
-const { app } = require('../server');
+const { api } = require('../server');
 
 describe('Check Server Routes', function() {
   it('GET to /user should return 404', function(done) {
-    request(app)
+    request(api)
       .get('/user')
       .end((err, res) => {
         expect(res.statusCode).to.equal(404);
@@ -12,8 +12,8 @@ describe('Check Server Routes', function() {
       });
   });
 
-  it('GET to /users', function(done) {
-    request(app)
+  it('GET to /users should return 200', function(done) {
+    request(api)
       .get('/users')
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
