@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Build a node server using TDD.",
   "main": "server.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "mocha test/**/*.js",
     "start": "node server.js"
