@@ -1,5 +1,8 @@
-server = (a, b) => {
-  return 3;
-};
+const express = require('express');
+const app = express();
 
-module.exports = server;
+app.get('/users', function(req, res) {
+  res.status(200).json({ name: 'tobi' });
+});
+
+module.exports = { app };
