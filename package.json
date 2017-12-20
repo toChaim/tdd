@@ -4,7 +4,8 @@
   "description": "Build a node server using TDD.",
   "main": "server.js",
   "scripts": {
-    "test": "nyc mocha test/**/*.js",
+    "test": "mocha test/**/*.js",
+    "test-with-coverage": "nyc mocha test/**/*.js",
     "start": "node server.js"
   },
   "repository": {
