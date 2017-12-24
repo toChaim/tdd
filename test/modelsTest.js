@@ -1,28 +1,38 @@
 const request = require('supertest');
 const { expect } = require('chai');
 const { api } = require('../server');
+const { User } = require('../models');
 
 // const mongoose = require('mongoose');
 // const { Schema, model } = require('mongoose');
 
-// const testSchema = new Schema({
-//   name: { type: String, require: true }
+// var memeSchema = new mongoose.Schema({
+//   name: { type: String, required: true }
 // });
-// const Name = mongoose.model('Name', testSchema);
 
-// before(function(done) {
-//   mongoose.connect('mongodb://localhost/testBLG');
-//   const db = mongoose.connection;
-//   db.on('error', console.error.bind(console, 'connection error'));
-//   db.once('open', function() {
-//     console.log('We are connected to test database!');
-//     done();
+// var Meme = mongoose.model('Meme', memeSchema);
+
+// describe('meme', function() {
+//   it('should be invalid if name is empty', function(done) {
+//     var m = new Meme();
+
+//     m.validate(function(err) {
+//       expect(err.errors.name).to.exist;
+//       done();
+//     });
 //   });
 // });
 
-// describe('Test Models', function() {
-//   it('New name saved to test datebase', function(done) {
-//     var testName = Name({ name: 'test1' });
-//     testName.save(done);
-//   });
-// });
+describe('Test user model', function() {
+  it('should be invalid if username and password are filds are empty', function(
+    done
+  ) {
+    var user = new User();
+
+    user.validate(function(err) {
+      expect(err.errors.password).to.exist;
+      expect(err.errors.username).to.exist;
+      done();
+    });
+  });
+});
