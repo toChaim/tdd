@@ -1,5 +1,6 @@
 const request = require('supertest');
 const { expect } = require('chai');
+process.env.ENV = 'unitTest';
 const { api } = require('../server');
 
 describe('Check Server Routes', function() {
