@@ -2,7 +2,7 @@ const request = require('supertest');
 const { expect } = require('chai');
 const { User } = require('../models');
 
-describe('Test user model', function() {
+describe('user models test', function() {
   it('should be invalid if username and password are filds are empty', function(
     done
   ) {
