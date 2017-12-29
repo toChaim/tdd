@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 
 const api = require('../api');
 
-// mongoose.Promise = Promise;
-// const { User } = require('../models');
+mongoose.Promise = Promise;
+const { User } = require('../models');
 
-// var token;
-// var auth = {};
+var token;
+var auth = {};
 
 // // function loginUser(auth) {
 // //   return function(done) {
