@@ -10,6 +10,10 @@ const { User } = require('../models');
 var token;
 var auth = {};
 
+beforeEach(function() {
+  console.log('before integration test.');
+});
+
 describe('user integration test', function() {
   it('fake integration test', function() {
     expect(200).to.equal(200);
