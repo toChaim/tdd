@@ -10,6 +10,12 @@ const { User } = require('../models');
 var token;
 var auth = {};
 
+describe('user integration test', function() {
+  it('fake integration test', function() {
+    expect(200).to.equal(200);
+  });
+});
+
 // // function loginUser(auth) {
 // //   return function(done) {
 // //     console.log('fake loginUser');
