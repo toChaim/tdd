@@ -1,6 +1,6 @@
 const api = require('express')();
 const bodyParser = require('body-parser');
-const gamesRoutes = require('./routesGames');
+//const gamesRoutes = require('./routesGames');
 const userRoutes = require('./routes/users');
 const authRoutes = require('./routes/auth');
 const { ensureLogin } = require('./middleware/auth');
