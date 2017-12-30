@@ -18,6 +18,10 @@ describe('user integration test', function() {
   it('fake integration test', function() {
     expect(200).to.equal(200);
   });
+
+  it('fake integration test 2', function() {
+    expect(201).to.equal(201);
+  });
 });
 
 // // function loginUser(auth) {
