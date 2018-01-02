@@ -1,6 +1,15 @@
 require('dotenv').load();
 const jwt = require('jsonwebtoken');
 
+const isLoggedIn = {headers} => {
+  if(!req.headers.authorization){
+    return false;
+  }
+  try{
+    const token = req.header
+  }
+}
+
 const ensureLogin = function(req, res, next) {
   try {
     var token = req.headers.authorization.split(' ')[1];
