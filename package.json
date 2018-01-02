@@ -4,8 +4,8 @@
   "description": "Build a node server using TDD.",
   "main": "server.js",
   "scripts": {
-    "test": "mocha test/**/*.js",
-    "test-with-coverage": "nyc mocha test/**/*.js",
+    "test": "mocha test/**/*.js --exit",
+    "test-with-coverage": "nyc mocha test/**/*.js --exit",
     "start": "node server.js"
   },
   "repository": {
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/toChaim/tdd.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Chaim Finkelman",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/toChaim/tdd/issues"
@@ -21,8 +21,10 @@
   "homepage": "https://github.com/toChaim/tdd#readme",
   "dependencies": {
     "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.13.7"
   },
   "devDependencies": {
