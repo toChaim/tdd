@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+const { PORT } = require("./config");
+const api = require("express")();
+=======
 const api = require('express')();
 const bodyParser = require('body-parser');
 //const gamesRoutes = require('./routesGames');
@@ -20,3 +24,4 @@ api.listen(3000, () => {
 });
 
 module.exports = api;
+>>>>>>> master
