@@ -5,7 +5,7 @@
   "main": "api.js",
   "scripts": {
     "test": "jest",
-    "test-with-coverage": "jest --cover",
+    "test-with-coverage": "jest --coverage",
     "start": "node server.js"
   },
   "repository": {
