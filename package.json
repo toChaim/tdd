@@ -4,8 +4,8 @@
   "description": "",
   "main": "api.js",
   "scripts": {
-    "test": "mocha test/**/*.js --exit",
-    "test-with-coverage": "nyc mocha test/**/*.js --exit",
+    "test": "jest",
+    "test-with-coverage": "jest --cover",
     "start": "node server.js"
   },
   "repository": {
@@ -20,16 +20,7 @@
   },
   "homepage": "https://github.com/toChaim/tdd#readme",
   "dependencies": {
-    "bcrypt": "^1.0.3",
-    "body-parser": "^1.18.2",
-    "dotenv": "^4.0.0",
-    "express": "^4.16.2",
-    "jsonwebtoken": "^8.1.0",
-    "mongoose": "^4.13.7"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.0.0",
-    "nyc": "^11.4.1"
   }
 }
