@@ -1,7 +1,7 @@
 import api from '../src/api';
 
-describe('tests should run', ()=>{
-    it('should fail this test',()=>{
-        expect(true).toEqual(false);
+describe('api tests', ()=>{
+    it('should be a function',()=>{
+        expect(typeof api).toEqual('function');
     })
 });

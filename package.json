@@ -1,7 +1,7 @@
 {
   "name": "tdd",
   "version": "1.0.0",
-  "description": "",
+  "description": "building a backend using tdd",
   "main": "api.js",
   "scripts": {
     "test": "jest",
