@@ -1,25 +1,32 @@
 import api from '../src/api';
 import request from 'supertest';
 
+const makeSpy = ()=>{ 
+            let cnt = 0; 
+            return (...args)=>{
+                return {cnt: ++cnt, args}
+            };
+        };
+
 describe('api tests', ()=>{
-    it('should be a function',()=>{
+    test('should be a function',()=>{
         expect(typeof api).toEqual('function');
     });
 
-    it('should return a function',()=>{
-        const server = api('test');
+    test('should return a function',()=>{
+        const server = api('test', {notFoundError: makeSpy(), errorHandler: makeSpy()});
         expect(typeof server).toEqual('function');
     });
 
     describe('should return correct results', ()=>{
-        const server = api('test');
-        it('/ responds with 200 JSON', function(done) {
+        const server = api('test', {notFoundError: makeSpy(), errorHandler: makeSpy()});
+        test('/ responds with 200 JSON', function(done) {
             request(server)
                 .get('/')
                 .expect('Content-Type', /json/)
                 .expect(200, done);
         });
-        it('/not_real_rout responds with 404 JSON', function(done) {
+        test('/not_real_rout call both  notFoundError and errorHandler', function(done) {
             request(server)
                 .get('/not_real_rout')
                 .expect('Content-Type', /json/)

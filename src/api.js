@@ -1,7 +1,8 @@
 import express from 'express';
 import notFoundError from './helpers/notFoundError';
+import errorHandler from './helpers/errorHandler';
 
-export default (NODE_ENV)=>{
+export default (NODE_ENV,{notFoundError,errorHandler})=>{
     const api = express();
 
     api.get('/', (req,res,next)=>{
@@ -9,13 +10,7 @@ export default (NODE_ENV)=>{
     });
 
     api.use(notFoundError);
-
-    api.use((err, req, res, next) => {
-        return res.status(err.status || 500).json({
-          message: err.message,
-          error: NODE_ENV === "development" ? err : {}
-        });
-      });
+    api.use(errorHandler);
 
     return api;
 }
